@@ -22,6 +22,10 @@ html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del
 	-webkit-border-radius: $rad;
 }
 
+//color palette
+$orange: #FF512F;
+$yellow: #F09819;
+
 //fullscreen page
 html, body {
 	padding: 0;
@@ -39,7 +43,7 @@ html, body {
 
 //pane styles
 .js-ide-pane {
-	@include vertical-gradient(#FF512F, #F09819);
+	@include vertical-gradient($orange, $yellow);
 	width: 500px;
 	height: 100%;
 	right: 0;

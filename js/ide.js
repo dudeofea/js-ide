@@ -16,11 +16,11 @@
 			head.appendChild(script);
 		};
 		//load some utilities and the actual IDE
-		var base = script_src.split('/');
-		base.pop(); base = base.join('/');
 		loadScript(base+'/gui.js')
 	});
 	//get our script path
 	var scripts = document.getElementsByTagName("script"),
-		script_src = scripts[scripts.length-1].src;
+		script_src = scripts[scripts.length-1].src,
+		base = script_src.split('/');
+	base.pop(); base = base.join('/');
 })();
