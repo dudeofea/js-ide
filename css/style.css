@@ -1,0 +1,102 @@
+html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, label, legend, p, blockquote, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+:focus {
+  outline: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+abbr, acronym {
+  border: 0; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative; }
+
+.js-ide-right {
+  padding-right: 500px; }
+
+.js-ide-pane {
+  background: #FF512F;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#FF512F, #F09819);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FF512F, #F09819);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FF512F, #F09819);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FF512F, #F09819);
+  /* Standard syntax */
+  width: 500px;
+  height: 100%;
+  right: 0;
+  position: absolute; }
+
+.js-ide-url-input-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.js-ide-url-input {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -webkit-transform: translate(-50%, -50%);
+  /* Saf3.1+, Chrome */
+  -moz-transform: translate(-50%, -50%);
+  /* FF3.5+ */
+  -ms-transform: translate(-50%, -50%);
+  /* IE9 */
+  -o-transform: translate(-50%, -50%);
+  /* Opera 10.5+ */
+  transform: translate(-50%, -50%);
+  padding: 7px 15px; }
+
+/*# sourceMappingURL=style.css.map */

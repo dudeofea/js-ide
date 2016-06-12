@@ -1,0 +1,63 @@
+//eric meyer's css reset
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+//MIXINS
+@mixin vertical-gradient($color1, $color2) {
+	background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($color1, $color2); /* Standard syntax */
+}
+@mixin transform($args){
+	-webkit-transform: $args;  /* Saf3.1+, Chrome */
+	   -moz-transform: $args;  /* FF3.5+ */
+		-ms-transform: $args;  /* IE9 */
+		 -o-transform: $args;  /* Opera 10.5+ */
+			transform: $args;
+}
+@mixin border-radius($rad){
+		    border-radius: $rad;
+	   -moz-border-radius: $rad;
+	-webkit-border-radius: $rad;
+}
+
+//fullscreen page
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+//pane position styles
+.js-ide-right {
+	padding-right: 500px;
+}
+
+//pane styles
+.js-ide-pane {
+	@include vertical-gradient(#FF512F, #F09819);
+	width: 500px;
+	height: 100%;
+	right: 0;
+	position: absolute;
+}
+
+//url input bar styles
+.js-ide-url-input-wrapper {
+	position: relative;;
+	width: 100%;
+	height: 100%;
+}
+.js-ide-url-input {
+	border: 1px solid rgba(0,0,0,0.4);
+	position: relative;;
+	top: 50%;
+	left: 50%;
+	@include border-radius(7px);
+	@include transform(translate(-50%, -50%));
+	padding: 7px 15px;
+}
