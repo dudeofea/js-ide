@@ -56,10 +56,32 @@ html, body {
   box-sizing: border-box;
   position: relative; }
 
-.js-ide-right {
+.ji-button {
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+  margin: 0;
+  background-color: #FFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  .ji-button:active {
+    border-bottom-width: 1px;
+    margin-top: 1px;
+    background-color: #f7f7f7; }
+
+.ji-button-primary {
+  color: #FFF;
+  background-color: #FF512F; }
+  .ji-button-primary:active {
+    background-color: #fb2900; }
+
+.ji-right {
   padding-right: 500px; }
 
-.js-ide-pane {
+.ji-pane {
   background: #FF512F;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#FF512F, #F09819);
@@ -73,30 +95,37 @@ html, body {
   width: 500px;
   height: 100%;
   right: 0;
-  position: absolute; }
+  position: absolute;
+  border-left: 1px solid rgba(255, 81, 47, 0.5);
+  box-sizing: border-box; }
 
-.js-ide-url-input-wrapper {
-  position: relative;
+.ji-viewer {
   width: 100%;
-  height: 100%; }
-
-.js-ide-url-input {
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  height: 100%;
+  padding-top: 56px;
   position: relative;
-  top: 50%;
-  left: 50%;
-  border-radius: 7px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -webkit-transform: translate(-50%, -50%);
-  /* Saf3.1+, Chrome */
-  -moz-transform: translate(-50%, -50%);
-  /* FF3.5+ */
-  -ms-transform: translate(-50%, -50%);
-  /* IE9 */
-  -o-transform: translate(-50%, -50%);
-  /* Opera 10.5+ */
-  transform: translate(-50%, -50%);
-  padding: 7px 15px; }
+  box-sizing: border-box; }
+
+.ji-url-input-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  padding: 10px 60px 10px 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #ffe6e2; }
+  .ji-url-input-wrapper .ji-url-input {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    width: 100%;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    padding: 7px 15px;
+    box-sizing: border-box; }
+  .ji-url-input-wrapper .ji-button {
+    position: absolute;
+    top: 10px;
+    right: 13px; }
 
 /*# sourceMappingURL=style.css.map */
