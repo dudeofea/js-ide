@@ -27,6 +27,8 @@
 					wrapper.innerHTML= xhr.responseText;
 					var html = wrapper.firstChild;
 					elem.appendChild(html);
+					//callback
+					if(callback != null){ callback(); }
 				}
 			}
 			xhr.open("GET", url, true);
@@ -35,9 +37,17 @@
 		};
 		//load views
 		loadHTML('html/side-pane.html', document.body);
-		loadHTML('html/empty-window.html', document.body);
+		loadHTML('html/empty-window.html', document.body, function(){
+			//when picking a new url
+			var url_button = document.getElementsByClassName('ji-url-input-wrapper')[0].getElementsByClassName('ji-button')[0];
+			url_button.addEventListener('click', function(){
+				var url = document.getElementsByClassName('ji-url-input')[0].value;
+				//get requested page's html
+				loadHTML('http://'+url, document.getElementsByClassName('ji-body')[0]);
+			});
+		});
 		//add style to body
-		document.body.className = "js-ide-right";
+		document.body.className = "ji-right";
 	});
 	//get our script path
 	var scripts = document.getElementsByTagName("script"),

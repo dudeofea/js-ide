@@ -25,6 +25,10 @@ html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del
 //color palette
 $orange: #FF512F;
 $yellow: #F09819;
+$blue: #01BAEF;
+$teal: #0CBABA;
+$dark: #000;
+$light: #FFF;
 
 //fullscreen page
 html, body {
@@ -36,32 +40,74 @@ html, body {
 	position: relative;
 }
 
+// --- UI Elements
+.ji-button {
+	min-width: 34px;
+	min-height: 34px;
+	padding: 0;
+	margin: 0;
+	background-color: $light;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-bottom-width: 2px;
+	@include border-radius(5px);
+	&:active {
+		border-bottom-width: 1px;
+		margin-top: 1px;
+		background-color: darken($light, 3);
+	}
+}
+.ji-button-primary {
+	color: $light;
+	background-color: $orange;
+	&:active {
+		background-color: darken($orange, 10);
+	}
+}
+
 //pane position styles
-.js-ide-right {
+.ji-right {
 	padding-right: 500px;
 }
 
 //pane styles
-.js-ide-pane {
+.ji-pane {
 	@include vertical-gradient($orange, $yellow);
 	width: 500px;
 	height: 100%;
 	right: 0;
 	position: absolute;
+	border-left: 1px solid rgba($orange, 0.5);
+	box-sizing: border-box;
+}
+
+//window for viewing a page
+.ji-viewer {
+	width: 100%;
+	height: 100%;
+	padding-top: 56px;
+	position: relative;
 }
 
 //url input bar styles
-.js-ide-url-input-wrapper {
-	position: relative;;
+.ji-url-input-wrapper {
+	position: absolute;
+	top: 0;
 	width: 100%;
-	height: 100%;
-}
-.js-ide-url-input {
-	border: 1px solid rgba(0,0,0,0.4);
-	position: relative;;
-	top: 50%;
-	left: 50%;
-	@include border-radius(7px);
-	@include transform(translate(-50%, -50%));
-	padding: 7px 15px;
+	height: 56px;
+	padding: 10px 60px 10px 15px;
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	background-color: lighten($orange, 35);
+	.ji-url-input {
+		border: 1px solid rgba(0,0,0,0.4);
+		width: 100%;
+		@include border-radius(7px);
+		padding: 7px 15px;
+		box-sizing: border-box;
+	}
+	.ji-button {
+		position: absolute;
+		top: 10px;
+		right: 13px;
+	}
 }
